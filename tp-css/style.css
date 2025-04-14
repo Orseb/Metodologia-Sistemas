@@ -1,0 +1,136 @@
+/* style.css */
+:root {
+    --bgColor: #f4f4f4;
+    --bgColorOscuro: #333;
+    --colorTexto: #fff;
+    --colorTextoOscuro: #333;
+    --colorBanner: #ff5733;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--colorTextoOscuro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--bgColorOscuro);
+    padding: 1rem;
+    color: var(--colorTexto);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--colorTexto);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--colorBanner);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.banner {
+    background-color: var(--colorBanner);
+    color: var(--colorTexto);
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-action {
+    background-color: var(--bgColorOscuro);
+    color: var(--colorTexto);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-action:hover {
+    transform: scale(1.05);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--colorTexto);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: var(--bgColorOscuro);
+    color: var(--colorTexto);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+p {
+    margin: 20px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .banner h2 {
+        font-size: 2rem;
+    }
+}
